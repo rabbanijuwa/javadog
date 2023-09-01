@@ -70,7 +70,7 @@ public class Dog {
         System.out.println("Color:" + snoppy.getColor());
         System.out.println("Weight:" + snoppy.getWeight());
         System.out.println("Breed:" + snoppy.getBreed());
-        System.out.println("Size"+snoppy.getSize());
+        System.out.println("Size:"+snoppy.getSize());
 
         //Spot
         Dog spot = new Dog("Spot", 5,"Brown",62, Breed.Corgi, Size.Small);
@@ -80,7 +80,7 @@ public class Dog {
         System.out.println("Color:" + spot.getColor());
         System.out.println("Weight:" + spot.getWeight());
         System.out.println("Breed:" + spot.getBreed());
-        System.out.println("Size" + spot.getSize());
+        System.out.println("Size:" + spot.getSize());
 
         //Wolf
         Dog wolf = new Dog("Wolf", 13, "Gold",87, Breed.GoldenRetriever, Size.Medium );
@@ -91,7 +91,7 @@ public class Dog {
         System.out.println("Weight:" + wolf.getWeight());
         System.out.println("Breed:" + wolf.getBreed());
         System.out.println("Size:" + wolf.getSize());
-        
+
 //Behaviors
         snoppy.bark();
         spot.eat();
