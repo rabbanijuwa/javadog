@@ -8,13 +8,23 @@ public class Dog {
     private Size size; //Using enum type here
 
         // constructor
-    public Dog(String name, int age, String color, int weight, Breed breed, Size size) {
+// Constructors
+    public Dog(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+    public Dog(String name, int age, Size size) {
         this.name = name;
         this.age = age;
-        this.color = color;
-        this.weight = weight;
-        this.breed = breed;
         this.size = size;
+    }
+
+    public Dog(String name, int age, Size size, Breed breed) {
+        this.name = name;
+        this.age = age;
+        this.size = size;
+        this.breed = breed;
     }
     // methods
     public void bark() {System.out.println(name + " is barking!"); }
@@ -63,32 +73,23 @@ public class Dog {
     public void setSize(Size size) {this.size = size;}
     public static void main (String[] args) {
         // snoppy
-        Dog snoppy= new Dog("Snoppy", 12, "black", 52, Breed.GermanShepherd, Size.Large);
+        Dog snoppy= new Dog("Snoppy", 12);
 
         System.out.println("Name:" + snoppy.getName());
         System.out.println("Age:" + snoppy.getAge());
-        System.out.println("Color:" + snoppy.getColor());
-        System.out.println("Weight:" + snoppy.getWeight());
-        System.out.println("Breed:" + snoppy.getBreed());
-        System.out.println("Size:"+snoppy.getSize());
 
         //Spot
-        Dog spot = new Dog("Spot", 5,"Brown",62, Breed.Corgi, Size.Small);
+        Dog spot = new Dog("Spot", 5, Size.Small);
 
         System.out.println("Name:" + spot.getName());
         System.out.println("Age:" + spot.getAge());
-        System.out.println("Color:" + spot.getColor());
-        System.out.println("Weight:" + spot.getWeight());
-        System.out.println("Breed:" + spot.getBreed());
         System.out.println("Size:" + spot.getSize());
 
         //Wolf
-        Dog wolf = new Dog("Wolf", 13, "Gold",87, Breed.GoldenRetriever, Size.Medium );
+        Dog wolf = new Dog("Wolf", 13, Size.Medium, Breed.GoldenRetriever );
 
         System.out.println("Name:" + wolf.getName());
         System.out.println("Age:" + wolf.getAge());
-        System.out.println("Color:" + wolf.getColor());
-        System.out.println("Weight:" + wolf.getWeight());
         System.out.println("Breed:" + wolf.getBreed());
         System.out.println("Size:" + wolf.getSize());
 
